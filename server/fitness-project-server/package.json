@@ -1,0 +1,22 @@
+{
+  "name": "fitness-project-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/iitc-dev/fitness-project-server.git",
+  "author": "IITC Dev",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mysql2": "^3.11.0"
+  },
+  "scripts": {
+    "dev": "tsc && nodemon dist/index.js"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.12",
+    "nodemon": "^3.1.4",
+    "typescript": "^5.5.4"
+  }
+}

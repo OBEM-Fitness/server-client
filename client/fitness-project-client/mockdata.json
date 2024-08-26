@@ -1,0 +1,37 @@
+{
+    "exercises": [
+      {
+        "id": 1,
+        "name": "Dumbbell Push Press",
+        "image_url": "./src/assets/dumBell.svg",
+        "equipment": "Dumbbells",
+        "muscle_family": "Chest",
+        "description": "A compound exercise targeting the chest, shoulders, and triceps."
+      },
+      {
+        "id": 2,
+        "name": "Seated leg extensions",
+        "image_url": "./src/assets/hipThrust.svg",
+        "equipment": "Leg extension machine",
+        "muscle_family": "Legs",
+        "description": "An isolation exercise for the quadriceps."
+      },
+      {
+        "id": 3,
+        "name": "Romanian deadlift",
+        "image_url": "./src/assets/romanianDead.svg",
+        "equipment": "Barbell",
+        "muscle_family": "Back",
+        "description": "A hip-hinge movement targeting the hamstrings and lower back."
+      },
+      {
+        "id": 4,
+        "name": "Hip Thrust",
+        "image_url": "./src/assets/seatedLeg.svg",
+        "equipment": "Bench, Barbell",
+        "muscle_family": "Glutes",
+        "description": "An exercise focusing on glute activation and strength."
+      }
+    ],
+    "muscleGroups": ["Chest", "Back", "Legs", "Glutes", "Arms", "Shoulders", "Core"]
+  }
