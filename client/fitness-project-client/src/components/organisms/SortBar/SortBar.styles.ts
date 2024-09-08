@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { colors } from '../../../colors';
-import { mediaQueries } from '../../../consts/mediaQueries';
-import { StyledButton } from '../../atoms/Button/Button.styles';
+import styled from "styled-components";
+import { colors } from "../../../colors";
+import { mediaQueries } from "../../../consts/mediaQueries";
+import { StyledButton } from "../../atoms/Button/Button.styles";
 
 export const SortBar = styled.div`
   display: flex;
@@ -22,7 +22,7 @@ export const SortBar = styled.div`
 `;
 
 export const SortBarButton = styled(StyledButton)`
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   ${mediaQueries.mobile} {
     width: auto;
     height: 26px;
