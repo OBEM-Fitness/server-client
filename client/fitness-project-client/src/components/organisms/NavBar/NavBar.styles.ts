@@ -33,6 +33,19 @@ export const LogoSection = styled.div`
   align-items: center;
 `;
 
+export const Logo = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 40px;
+
+  img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+  }
+`;
 export const NavBarButtons = styled.div`
   display: flex;
   gap: 26px;

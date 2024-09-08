@@ -1,4 +1,3 @@
-import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import {
   StyledNavBar,
@@ -11,9 +10,11 @@ import {
   MobileNavItem,
   NavBarIcon,
   NavBarLabel,
+  Logo,
 } from "./NavBar.styles";
 import Icon from "../../atoms/Icon/Icon";
 import { colors } from "../../../colors";
+import Logoimage from "../../../assets/logo.png";
 
 type IconNames = "home" | "dumbBell" | "chart" | "settings" | "crown";
 
@@ -52,8 +53,10 @@ const NavBar: React.FC = () => {
             onClick={() => handleNavigation("/")}
             style={{ color: colors.black }}
           >
-            <Icon iconName="crown" size={36} color={colors.black} />
-            <NavBarText>BIOM Fitness Inc.</NavBarText>
+            <Logo>
+              <img src={Logoimage} alt="OB Fitness Inc. Logo" />
+            </Logo>
+            <NavBarText>OB Fitness Inc.</NavBarText>
           </LogoButton>
         </LogoSection>
         <NavBarButtons>
