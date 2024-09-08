@@ -1,53 +1,108 @@
-import { StyledNavBar, NavBarButtons, LogoButton, NavBarText } from './NavBar.styles';
-import Link from '../../atoms/Link/Link';
-import Icon from '../../atoms/Icon/Icon';
-import { useState } from 'react';
-import { colors } from '../../../colors';
+import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import {
+  StyledNavBar,
+  NavBarContent,
+  LogoSection,
+  NavBarButtons,
+  LogoButton,
+  NavBarText,
+  MobileNavBar,
+  MobileNavItem,
+  NavBarIcon,
+  NavBarLabel,
+} from "./NavBar.styles";
+import Icon from "../../atoms/Icon/Icon";
+import { colors } from "../../../colors";
+
+type IconNames = "home" | "dumbBell" | "chart" | "settings" | "crown";
+
+interface NavItem {
+  path: string;
+  iconName: IconNames;
+  label: string;
+}
 
 const NavBar: React.FC = () => {
-  const [category, setCategory] = useState('isActive');
-  const handleCategoryClick = (category: string) => {
-    setCategory(category);
-  };
-  const getNavBarButtonColor = (buttonCategory: string) => {
-    const buttonColor = buttonCategory === 'home' || buttonCategory === 'exercise' ? colors.primary : colors.grey;
+  const location = useLocation();
+  const navigate = useNavigate();
 
-    return { color: buttonColor };
+  const handleNavigation = (path: string) => {
+    navigate(path);
   };
-  const getNavBarButtonsColor = (category: string) => {
-    if (category === 'home' || category === 'exercise' || category === 'progress' || category === 'settings') {
-      return {
-        color: colors.primary,
-      };
-    } else {
-      return {
-        color: colors.grey,
-      };
-    }
+
+  const isActive = (path: string) => location.pathname === path;
+
+  const getNavBarButtonColor = (path: string) => {
+    return isActive(path) ? colors.primary : colors.grey;
   };
-  return (
+
+  const navItems: NavItem[] = [
+    { path: "/", iconName: "home", label: "Home" },
+    { path: "/exercises", iconName: "dumbBell", label: "Workout" },
+    { path: "/progress", iconName: "chart", label: "Progress" },
+    { path: "/settings", iconName: "settings", label: "Settings" },
+  ];
+
+  const renderDesktopNav = () => (
     <StyledNavBar>
-      <LogoButton onClick={() => handleCategoryClick('home')} style={getNavBarButtonsColor('home')}>
-        <Icon iconName="crown" size={36} color={colors.black} />
-        <NavBarText>BIOM Fitness Inc.</NavBarText>
-      </LogoButton>
-      <NavBarButtons>
-        {['home', 'exercise'].map((buttonName) => (
-          <Link
-            key={buttonName}
-            to={`/${buttonName}`}
-            onClick={() => handleCategoryClick(buttonName)}
-            style={getNavBarButtonsColor(buttonName)}
+      <NavBarContent>
+        <LogoSection>
+          <LogoButton
+            onClick={() => handleNavigation("/")}
+            style={{ color: colors.black }}
           >
-            <Icon iconName={buttonName === 'home' ? 'home' : 'dumbBell'} size={36} />
-            <NavBarText>{buttonName.charAt(0).toUpperCase() + buttonName.slice(1)}</NavBarText>
-          </Link>
-        ))}
-      </NavBarButtons>
+            <Icon iconName="crown" size={36} color={colors.black} />
+            <NavBarText>BIOM Fitness Inc.</NavBarText>
+          </LogoButton>
+        </LogoSection>
+        <NavBarButtons>
+          {navItems.slice(0, 2).map((item) => (
+            <NavBarText
+              key={item.path}
+              onClick={() => handleNavigation(item.path)}
+              style={{ color: getNavBarButtonColor(item.path) }}
+            >
+              <Icon
+                iconName={item.iconName}
+                size={24}
+                color={getNavBarButtonColor(item.path)}
+              />
+              {item.label}
+            </NavBarText>
+          ))}
+        </NavBarButtons>
+      </NavBarContent>
     </StyledNavBar>
   );
-};
 
-NavBar.displayName = 'NavBar';
+  const renderMobileNav = () => (
+    <MobileNavBar>
+      {navItems.map((item) => (
+        <MobileNavItem
+          key={item.path}
+          $active={isActive(item.path)}
+          onClick={() => handleNavigation(item.path)}
+        >
+          <NavBarIcon>
+            <Icon
+              iconName={item.iconName}
+              size={24}
+              color={isActive(item.path) ? colors.primary : colors.grey}
+            />
+          </NavBarIcon>
+          <NavBarLabel>{item.label}</NavBarLabel>
+        </MobileNavItem>
+      ))}
+    </MobileNavBar>
+  );
+
+  return (
+    <>
+      {renderDesktopNav()}
+      {renderMobileNav()}
+    </>
+  );
+};
 
 export default NavBar;
