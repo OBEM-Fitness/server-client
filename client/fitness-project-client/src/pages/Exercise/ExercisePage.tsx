@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { colors } from "../../colors";
 import Icon from "../../components/atoms/Icon/Icon";
 import mockData from "../../../mockdata.json";
@@ -17,7 +17,7 @@ type Exercise = {
   name: string;
   image_url: string;
   equipment: string;
-  muscle_family: string;
+  muscle_families: string[];
   description: string;
 };
 
@@ -59,19 +59,25 @@ const ExercisePage: React.FC = () => {
     { category: "back", label: "Back" },
     { category: "legs", label: "Legs" },
     { category: "glutes", label: "Glutes" },
+    { category: "core", label: "Core" },
+    { category: "full body", label: "Full Body" },
+    { category: "arms", label: "Arms" },
   ];
 
   const exercises = (mockData as MockData).exercises;
 
   const filteredExercises = useMemo(() => {
-    return exercises.filter(
-      ({ id, muscle_family }) =>
-        activeCategory === "all" ||
-        (activeCategory === "favorites" && favorites.includes(id)) ||
-        muscle_family.toLowerCase() === activeCategory
-    );
+    return exercises.filter(({ id, muscle_families }) => {
+      if (activeCategory === "all") return true;
+      if (activeCategory === "favorites") return favorites.includes(id);
+      const familiesArray = Array.isArray(muscle_families)
+        ? muscle_families
+        : [muscle_families];
+      return familiesArray.some(
+        (mf: string) => mf.toLowerCase() === activeCategory.toLowerCase()
+      );
+    });
   }, [exercises, activeCategory, favorites]);
-
   return (
     <>
       <NavBar />

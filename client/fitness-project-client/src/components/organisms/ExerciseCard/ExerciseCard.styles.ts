@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { colors } from '../../../colors';
-import { mediaQueries } from '../../../consts/mediaQueries';
+import styled from "styled-components";
+import { colors } from "../../../colors";
+import { mediaQueries } from "../../../consts/mediaQueries";
 
 export const ExerciseItem = styled.div`
   display: flex;
@@ -30,20 +30,14 @@ export const ExerciseItem = styled.div`
 `;
 
 export const ExerciseImage = styled.img`
-  width: 85px;
-  height: 109px;
-  border-radius: 10px 0 0 10px;
-  margin-right: 16px;
-
-  ${mediaQueries.desktop} {
-    width: 100%;
-    height: auto;
-    border-radius: 10px 10px 0 0;
-    margin-right: 0;
-  }
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
 
   ${mediaQueries.mobile} {
-    height: auto;
+    height: 109px;
+    width: 85px;
   }
 `;
 

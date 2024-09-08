@@ -5,7 +5,7 @@
         "name": "Dumbbell Push Press",
         "image_url": "./src/assets/dumBell.svg",
         "equipment": "Dumbbells",
-        "muscle_family": "Chest",
+        "muscle_families": ["Chest", "Arms"],
         "description": "A compound exercise targeting the chest, shoulders, and triceps."
       },
       {
@@ -13,7 +13,7 @@
         "name": "Seated leg extensions",
         "image_url": "./src/assets/hipThrust.svg",
         "equipment": "Leg extension machine",
-        "muscle_family": "Legs",
+        "muscle_families": "Legs",
         "description": "An isolation exercise for the quadriceps."
       },
       {
@@ -21,7 +21,7 @@
         "name": "Romanian deadlift",
         "image_url": "./src/assets/romanianDead.svg",
         "equipment": "Barbell",
-        "muscle_family": "Back",
+        "muscle_families": ["Back", "Full Body", "Legs"],
         "description": "A hip-hinge movement targeting the hamstrings and lower back."
       },
       {
@@ -29,47 +29,47 @@
         "name": "Hip Thrust",
         "image_url": "./src/assets/seatedLeg.svg",
         "equipment": "Bench, Barbell",
-        "muscle_family": "Glutes",
+        "muscle_families": "Glutes",
         "description": "An exercise focusing on glute activation and strength."
       },
       {
         "id": 5,
-        "name": "Dumbbell Push Press",
-        "image_url": "./src/assets/dumBell.svg",
-        "equipment": "Dumbbells",
-        "muscle_family": "Chest",
-        "description": "A compound exercise targeting the chest, shoulders, and triceps."
+        "name": "Ball Twist",
+        "image_url": "./src/assets/balltwist.svg",
+        "equipment": "Ball",
+        "muscle_families": "Core",
+        "description": "Switch your legs and twist the ball in the two sides its great for your core and cordination."
       },
       {
         "id": 6,
-        "name": "Seated leg extensions",
-        "image_url": "./src/assets/hipThrust.svg",
-        "equipment": "Leg extension machine",
-        "muscle_family": "Legs",
-        "description": "An isolation exercise for the quadriceps."
+        "name": "Jumping Jack",
+        "image_url": "./src/assets/jumpingjacks.svg",
+        "equipment": "none",
+        "muscle_families": "Full Body",
+        "description": "The jumping jack is a great thechnic to increase your stamina and coordination."
       },
       {
         "id": 7,
-        "name": "Romanian deadlift",
-        "image_url": "./src/assets/romanianDead.svg",
-        "equipment": "Barbell",
-        "muscle_family": "Back",
-        "description": "A hip-hinge movement targeting the hamstrings and lower back."
+        "name": "Plank",
+        "image_url": "./src/assets/plank.svg",
+        "equipment": "none",
+        "muscle_families": ["Core", "Back"],
+        "description": "best for your core and back muscles."
       },
       {
         "id": 8,
-        "name": "Hip Thrust",
-        "image_url": "./src/assets/seatedLeg.svg",
-        "equipment": "Bench, Barbell",
-        "muscle_family": "Glutes",
+        "name": "Push Ups",
+        "image_url": "./src/assets/Push-Up.svg",
+        "equipment": "none",
+        "muscle_families": ["Arms","back","Core","Chest"],
         "description": "An exercise focusing on glute activation and strength."
       },
       {
         "id": 9,
-        "name": "Dumbbell Push Press",
-        "image_url": "./src/assets/dumBell.svg",
-        "equipment": "Dumbbells",
-        "muscle_family": "Chest",
+        "name": "Squats with weights",
+        "image_url": "./src/assets/weightsquats.svg",
+        "equipment": "Barbell",
+        "muscle_families": "Glutes",
         "description": "A compound exercise targeting the chest, shoulders, and triceps."
       },
       {
@@ -77,7 +77,7 @@
         "name": "Seated leg extensions",
         "image_url": "./src/assets/hipThrust.svg",
         "equipment": "Leg extension machine",
-        "muscle_family": "Legs",
+        "muscle_families": "Legs",
         "description": "An isolation exercise for the quadriceps."
       },
       {
@@ -85,7 +85,7 @@
         "name": "Romanian deadlift",
         "image_url": "./src/assets/romanianDead.svg",
         "equipment": "Barbell",
-        "muscle_family": "Back",
+        "muscle_families": "Back",
         "description": "A hip-hinge movement targeting the hamstrings and lower back."
       },
       {
@@ -93,7 +93,7 @@
         "name": "Hip Thrust",
         "image_url": "./src/assets/seatedLeg.svg",
         "equipment": "Bench, Barbell",
-        "muscle_family": "Glutes",
+        "muscle_families": "Glutes",
         "description": "An exercise focusing on glute activation and strength."
       },
       {
@@ -101,7 +101,7 @@
         "name": "Dumbbell Push Press",
         "image_url": "./src/assets/dumBell.svg",
         "equipment": "Dumbbells",
-        "muscle_family": "Chest",
+        "muscle_families": "Chest",
         "description": "A compound exercise targeting the chest, shoulders, and triceps."
       },
       {
@@ -109,7 +109,7 @@
         "name": "Seated leg extensions",
         "image_url": "./src/assets/hipThrust.svg",
         "equipment": "Leg extension machine",
-        "muscle_family": "Legs",
+        "muscle_families": "Legs",
         "description": "An isolation exercise for the quadriceps."
       },
       {
@@ -117,7 +117,7 @@
         "name": "Romanian deadlift",
         "image_url": "./src/assets/romanianDead.svg",
         "equipment": "Barbell",
-        "muscle_family": "Back",
+        "muscle_families": "Back",
         "description": "A hip-hinge movement targeting the hamstrings and lower back."
       },
       {
@@ -125,7 +125,7 @@
         "name": "Hip Thrust",
         "image_url": "./src/assets/seatedLeg.svg",
         "equipment": "Bench, Barbell",
-        "muscle_family": "Glutes",
+        "muscle_families": "Glutes",
         "description": "An exercise focusing on glute activation and strength."
       },
       {
@@ -133,7 +133,7 @@
         "name": "Dumbbell Push Press",
         "image_url": "./src/assets/dumBell.svg",
         "equipment": "Dumbbells",
-        "muscle_family": "Chest",
+        "muscle_families": "Chest",
         "description": "A compound exercise targeting the chest, shoulders, and triceps."
       },
       {
@@ -141,7 +141,7 @@
         "name": "Seated leg extensions",
         "image_url": "./src/assets/hipThrust.svg",
         "equipment": "Leg extension machine",
-        "muscle_family": "Legs",
+        "muscle_families": "Legs",
         "description": "An isolation exercise for the quadriceps."
       },
       {
@@ -149,7 +149,7 @@
         "name": "Romanian deadlift",
         "image_url": "./src/assets/romanianDead.svg",
         "equipment": "Barbell",
-        "muscle_family": "Back",
+        "muscle_families": "Back",
         "description": "A hip-hinge movement targeting the hamstrings and lower back."
       },
       {
@@ -157,9 +157,9 @@
         "name": "Hip Thrust",
         "image_url": "./src/assets/seatedLeg.svg",
         "equipment": "Bench, Barbell",
-        "muscle_family": "Glutes",
+        "muscle_families": "Glutes",
         "description": "An exercise focusing on glute activation and strength."
       }
     ],
-    "muscleGroups": ["Chest", "Back", "Legs", "Glutes", "Arms", "Shoulders", "Core"]
+    "muscleGroups": ["Chest", "Back", "Legs", "Glutes", "Arms", "Shoulders", "Core", "Full Body"]
   }
